@@ -26,7 +26,7 @@ input:focus {
   border: none;
   display: inline-block;
   margin-left: 10px;
-  width: 20%;
+  width: 10%;
   transition: .2s;
 }
 
