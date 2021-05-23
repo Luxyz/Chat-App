@@ -15,6 +15,7 @@ const Chat = ({ location }) => {
   const [room, setRoom] = useState('');
   const [message, setMessage] = useState('');
   const [messages, setMessages] = useState([]);
+  const [open, setOpen] = useState(false)
   const ENDPOINT = 'localhost:5000';
 
   useEffect(() => {
@@ -53,12 +54,32 @@ const Chat = ({ location }) => {
     }
   }
 
+  const addEmoji = e => {
+    let sym = e.unified.split('-')
+    let codesArray = []
+    sym.forEach(el => codesArray.push('0x' + el))
+    let emoji = String.fromCodePoint(...codesArray)
+    setMessage(message + emoji)
+  }
+
+  const handleSetEmojis = e =>{
+    setOpen(!open)
+  }
+
   return (
     <div className="outerContainer">
       <div className="container">
         <InfoBar room={room}/>
         <Messages messages={messages} name={name}/>
-        <Input message={message} setMessage={setMessage} sendMessage={sendMessage}/>
+        
+        <Input 
+          message={message} 
+          setMessage={setMessage} 
+          sendMessage={sendMessage} 
+          open={open}
+          handleSetEmojis={handleSetEmojis}
+          addEmoji={addEmoji}
+        />
       </div>
     </div>
   );
