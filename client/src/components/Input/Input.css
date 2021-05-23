@@ -1,0 +1,35 @@
+.form {
+  padding: 10px;
+  display: flex;
+  border-top: 1px solid #B9B8B8;
+}
+
+.input {
+  border: 1px solid #B9B8B8;
+  border-radius: 20px;
+  padding: 15px 20px;
+  width: 100%;
+  font-size: 16px;
+  transition: .2s;
+}
+
+input:focus {
+  border: 1px solid #2F61E3;
+  outline: none;
+}
+
+.sendButton {
+  color: #FFFFFF !important;
+  background-color: #2F61E3;
+  font-size: 16px;
+  border-radius: 10px;
+  border: none;
+  display: inline-block;
+  margin-left: 10px;
+  width: 20%;
+  transition: .2s;
+}
+
+.sendButton:hover {
+  background-color: #1B4CCD;
+}
