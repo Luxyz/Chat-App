@@ -33,3 +33,18 @@ input:focus {
 .sendButton:hover {
   background-color: #1B4CCD;
 }
+
+.openEmoji{
+  position: absolute;
+  z-index: 1000;
+  bottom: 50px;
+  left: 1%;
+  display: block;
+}
+
+.buttonEmoji{
+  display: inline;
+  position: relative;
+  left: -15px;
+  top: 13px;
+}
