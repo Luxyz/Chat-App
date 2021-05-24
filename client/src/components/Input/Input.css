@@ -19,10 +19,8 @@ input:focus {
 }
 
 .sendButton {
-  color: #FFFFFF !important;
   background-color: #2F61E3;
-  font-size: 16px;
-  border-radius: 10px;
+  border-radius: 20px;
   border: none;
   display: inline-block;
   margin-left: 10px;

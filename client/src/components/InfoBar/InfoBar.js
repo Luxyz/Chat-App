@@ -1,14 +1,14 @@
 import React from 'react';
 
-import onlineIcon from '../../icons/onlineIcon.png';
-import closeIcon from '../../icons/closeIcon.png';
+import chatIcon from '../../icons/chatIcon.svg';
+import closeIcon from '../../icons/closeIcon.svg';
 
 import './InfoBar.css';
 
 const InfoBar = ({ room }) => (
   <div className="infoBar">
     <div className="leftInnerContainer">
-      <img className="onlineIcon" src={onlineIcon} alt="online"/>
+      <img className="chatIcon" src={chatIcon} alt="chat"/>
       <h3>{room}</h3>
     </div>
     <div className="rightInnerContainer">

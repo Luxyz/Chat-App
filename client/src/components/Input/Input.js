@@ -1,5 +1,7 @@
 import React from 'react';
 
+import sendIcon from '../../icons/sendIcon.svg';
+
 import 'emoji-mart/css/emoji-mart.css'
 import {Picker} from 'emoji-mart'
 
@@ -11,7 +13,7 @@ import './Input.css';
 const Input = ({ message, setMessage, sendMessage, open, handleSetEmojis, addEmoji }) => (
   <form className="form">
     <IconButton onClick={handleSetEmojis} >
-        <SentimentSatisfiedOutlinedIcon fontSize='medium' />
+      <SentimentSatisfiedOutlinedIcon fontSize='small' />
         {open ? 
           <Picker set="apple"
             className='openEmoji' 
@@ -20,8 +22,8 @@ const Input = ({ message, setMessage, sendMessage, open, handleSetEmojis, addEmo
             style={{position:'absolute', width :'300px', left: '1%', bottom: '121%'}} 
             title={null}
           /> 
-        : null}
-      </IconButton>
+      : null}
+    </IconButton>
     <input
       className="input"
       type="text"
@@ -32,7 +34,7 @@ const Input = ({ message, setMessage, sendMessage, open, handleSetEmojis, addEmo
     />
     <button 
       className="sendButton" 
-      onClick={(event) => sendMessage(event)}>Enviar</button>
+      onClick={(event) => sendMessage(event)}><img src={sendIcon} alt="send"/></button>
   </form>
 )
 
