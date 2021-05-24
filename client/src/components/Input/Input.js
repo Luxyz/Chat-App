@@ -13,7 +13,7 @@ import './Input.css';
 const Input = ({ message, setMessage, sendMessage, open, handleSetEmojis, addEmoji }) => (
   <form className="form">
     <IconButton onClick={handleSetEmojis} >
-      <SentimentSatisfiedOutlinedIcon fontSize='small' />
+      <SentimentSatisfiedOutlinedIcon fontSize='medium' />
         {open ? 
           <Picker set="apple"
             className='openEmoji' 
